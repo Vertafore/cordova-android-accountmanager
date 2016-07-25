@@ -97,11 +97,6 @@ public class AccountManagerPlugin extends CordovaPlugin
 					callbackContext.error("username can not be null or empty");
 					return true;
 				}
-				else if(args.isNull(2) || args.getString(2).length() == 0)
-				{
-					callbackContext.error("password can not be null or empty");
-					return true;
-				}
 	
 				Account account = new Account(args.getString(1), args.getString(0));
 				Integer index = indexForAccount(account);
@@ -327,11 +322,6 @@ public class AccountManagerPlugin extends CordovaPlugin
 				if(args.isNull(0))
 				{
 					callbackContext.error("account can not be null");
-					return true;
-				}
-				else if(args.isNull(1) || args.getString(1).length() == 0)
-				{
-					callbackContext.error("password can not be null or empty");
 					return true;
 				}
 				
